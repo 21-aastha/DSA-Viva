@@ -1,14 +1,8 @@
+## Aastha Dubey (23T3004)
 # Student Management System in C++
 
 This project is a simple Student Management System implemented in C++. It allows you to perform basic operations on a list of students, including adding, deleting, searching, updating, sorting, and displaying student records.
 
-## Features
-- **Insert Student**: Add a new student with ID, name, age, and GPA.
-- **Delete Student**: Remove a student by their ID.
-- **Search Student**: Find a student by their ID and display their details.
-- **Update Student**: Modify the details of an existing student by their ID.
-- **Sort Students**: Sort the list of students by ID.
-- **Display All Students**: View all student records in the system.
 
 ## Code
 
@@ -29,7 +23,7 @@ struct Student {
 int currentStudentCount = 0;
 Student students[MAX_STUDENTS];
 
-// Function to add a student
+
 void insertStudent(int id, string name, int age, float gpa) {
     if (currentStudentCount >= MAX_STUDENTS) {
         cout << "Student list is full.\n";
@@ -40,7 +34,7 @@ void insertStudent(int id, string name, int age, float gpa) {
     cout << "Student added successfully.\n";
 }
 
-// Function to delete a student by ID
+
 void deleteStudent(int id) {
     bool found = false;
     for (int i = 0; i < currentStudentCount; i++) {
@@ -59,7 +53,7 @@ void deleteStudent(int id) {
     }
 }
 
-// Function to search a student by ID
+
 void searchStudent(int id) {
     for (int i = 0; i < currentStudentCount; i++) {
         if (students[i].id == id) {
@@ -70,7 +64,7 @@ void searchStudent(int id) {
     cout << "Student not found.\n";
 }
 
-// Function to update a student's details by ID
+
 void updateStudent(int id, string name, int age, float gpa) {
     for (int i = 0; i < currentStudentCount; i++) {
         if (students[i].id == id) {
@@ -84,7 +78,7 @@ void updateStudent(int id, string name, int age, float gpa) {
     cout << "Student not found.\n";
 }
 
-// Function to sort students by ID
+
 void sortStudents() {
     for (int i = 0; i < currentStudentCount - 1; i++) {
         for (int j = i + 1; j < currentStudentCount; j++) {
@@ -96,7 +90,7 @@ void sortStudents() {
     cout << "Students sorted by ID.\n";
 }
 
-// Function to display all students
+
 void displayStudents() {
     if (currentStudentCount == 0) {
         cout << "No students to display.\n";
